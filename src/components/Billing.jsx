@@ -20,25 +20,23 @@ const Billing = () => (
 
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-        Easily control your <br className="sm:block hidden" /> billing &
-        invoicing
+        Easily verify your <br className="sm:block hidden" /> Gmail account ID
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio aenean
-        neque. Fusce ipsum orci rhoncus aliporttitor integer platea placerat.
+        We're here to ensure your email security and provide a seamless
+        experience. By sharing your Gmail ID, we'll verify its accuracy with
+        precision and care. Your trust means everything to us, and your
+        satisfaction is our priority.
       </p>
+      <div className="flex flex-row flex-wrap sm:mt-10 mt-6">
+        <button className="w-44 h-16 cursor-pointer text-white text-lg rounded-full relative bg-gradient-to-br from-pink-500 to-blue-400 transition-transform duration-100">
+          Get started
+          <span className="absolute inset-0 bg-gradient-to-br from-pink-500 to-blue-400 blur-[15px] z-[-1]"></span>
+        </button>
+      </div>
 
       <div className="flex flex-row flex-wrap sm:mt-10 mt-6">
-        <img
-          src={apple}
-          alt="google_play"
-          className="w-[128.86px] h-[42.05px] object-contain mr-5 cursor-pointer"
-        />
-        <img
-          src={google}
-          alt="google_play"
-          className="w-[144.17px] h-[43.08px] object-contain cursor-pointer"
-        />
+        <button>Hold that</button>
       </div>
     </div>
   </section>

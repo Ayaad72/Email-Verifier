@@ -3,7 +3,6 @@ import "animate.css";
 import {
   Billing,
   Business,
-  CardDeal,
   Clients,
   CTA,
   Footer,
@@ -32,7 +31,6 @@ const App = () => (
         <Stats />
         <Business />
         <Billing />
-        <CardDeal />
         <Testimonials />
         <Clients />
         <CTA />
