@@ -1,6 +1,7 @@
 import { card } from "../assets";
 import styles, { layout } from "../style";
 import Button from "./Button";
+import "animate.css";
 
 const CardDeal = () => (
   <section className={layout.section}>
