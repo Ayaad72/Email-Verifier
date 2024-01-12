@@ -13,6 +13,7 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      scale: ["hover"], // Enable hover variant for scale utility
     },
     screens: {
       xs: "480px",

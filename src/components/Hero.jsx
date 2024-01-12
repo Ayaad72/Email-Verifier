@@ -74,7 +74,7 @@ const Hero = () => {
         <img
           src={mainpic}
           alt="billing"
-          className="w-[90%] h-[100%] relative z-[5]"
+          className="animate__animated animate__bounce w-[90%] h-[100%] relative z-[5]"
         />
 
         {/* gradient start */}
