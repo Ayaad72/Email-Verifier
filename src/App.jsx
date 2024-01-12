@@ -1,5 +1,5 @@
 import styles from "./style";
-import 'animate.css';
+import "animate.css";
 import {
   Billing,
   Business,
