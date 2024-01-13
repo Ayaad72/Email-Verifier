@@ -25,28 +25,51 @@ const FeatureCard = ({ icon, title, content, index }) => (
   </div>
 );
 
-const Business = () => (
-  <section id="features" className={layout.section}>
-    <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>
-        You do the bussssssiness, <br className="sm:block hidden" /> we’ll
-        handle the money.
-      </h2>
-      <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        With the right credit card, you can improve your financial life by
-        building credit, earning rewards and saving money. But with hundreds of
-        credit cards on the market.
-      </p>
+import { useState } from 'react';
 
-      <Button styles={`mt-10`} />
-    </div>
+const Business = () => {
+  const [hoveredCard, setHoveredCard] = useState(null);
 
-    <div className={`${layout.sectionImg} flex-col`}>
-      {features.map((feature, index) => (
-        <FeatureCard key={feature.id} {...feature} index={index} />
-      ))}
-    </div>
-  </section>
-);
+  return (
+    <section id="features" className={`${layout.section} text-white`}>
+      <div className="MainCardzz flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 space-x-4">
+        {[0, 1, 2].map((index) => (
+          <div
+            key={index}
+            onMouseEnter={() => setHoveredCard(index)}
+            onMouseLeave={() => setHoveredCard(null)}
+            className={`bg-white p-4 rounded-md shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105 flex flex-col items-center w-[50%] h-[100%] ${
+              hoveredCard === index ? 'bg-blue-300' : ''
+            }`}
+            style={{
+              boxShadow: hoveredCard === index ? '0 4px 8px rgba(255, 0, 0, 0.5)' : '0 4px 8px rgba(255, 0, 0, 0.5)',
+            }}
+          >
+            <i
+              className={`fas fa-arrow-up text-2xl mb-2 ${
+                hoveredCard === index ? 'text-blue-500' : 'text-red-500'
+              }`}
+            ></i>
+            <p
+              className={`text-gray-800 font-bold text-center ${
+                hoveredCard === index ? 'text-blue-500' : ''
+              }`}
+            >
+              Increase productivity
+            </p>
+            <p
+              className={`text-gray-600 text-center ${
+                hoveredCard === index ? 'text-blue-500' : ''
+              }`}
+            >
+              Save hours of work. Reduce the probability of getting into spam
+              lists.
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Business;

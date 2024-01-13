@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "animate.css";
 import { close, menu } from "../assets";
-import emllogo from "../assets/emllogo.png";
+import emllogo from "../assets/isssstbg.png";
 
 import { navLinks } from "../constants";
 
@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
-      <img src={emllogo} alt="hoobank" className="w-[150px] h-[48px]" />
+      <img src={emllogo} alt="hoobank" className="w-[150px]" />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (

@@ -1,5 +1,5 @@
 import styles from "../style";
-import { emllogo } from "../assets";
+import  emllogo  from "../assets/isssstbg.png";
 import { footerLinks, socialMedia } from "../constants";
 import "animate.css";
 
