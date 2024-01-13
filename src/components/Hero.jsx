@@ -2,6 +2,9 @@ import styles from "../style";
 import GetStarted from "./GetStarted";
 import "animate.css";
 import mainpic from "../../src/assets/mainpic.png";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import "../components/billing.css";
 
 const Hero = () => {
   return (
@@ -61,6 +64,9 @@ const Hero = () => {
             autoComplete="off"
           />
         </div>
+        <ol className="w-1/2 ml-10 pt-5">
+          <li className="text-white pr-79"></li>
+        </ol>
 
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
           This email verification tool connects to the mail server and checks
@@ -74,7 +80,7 @@ const Hero = () => {
         <img
           src={mainpic}
           alt="billing"
-          className="animate__animated animate__bounce w-[90%] h-[100%] relative z-[5]"
+          className="animated-float animate__animated animate__bounce w-[90%] h-[100%] relative z-[5]"
         />
 
         {/* gradient start */}

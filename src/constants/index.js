@@ -62,26 +62,17 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-    name: "Herman Jensen",
-    title: "Founder & Leader",
-    img: people01,
+      "Choose our Email Verifier Tool for unmatched precision and speed, ensuring a clean and reliable contact list. Seamless integration, robust security, and a special welcome offer make us your trusted partner in optimizing email campaigns effortlessly.",
   },
   {
     id: "feedback-2",
     content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Steve Mark",
-    title: "Founder & Leader",
-    img: people02,
+      "Elevate your email strategy effortlessly with our Email Verifier Tool—unmatched precision, seamless integration, robust security, and exclusive welcome perks await to ensure your satisfaction.",
   },
   {
     id: "feedback-3",
     content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Kenn Gallagher",
-    title: "Founder & Leader",
-    img: people03,
+      "Choose our Email Verifier Tool for unparalleled accuracy and speed, secure integration, and a special welcome offer. Join countless satisfied users who trust us for optimizing their email campaigns effortlessly",
   },
 ];
 
@@ -108,7 +99,7 @@ export const footerLinks = [
     title: "Useful Links",
     links: [
       {
-        name: "Content",
+        name: "Home",
         link: "https://www.hoobank.com/content/",
       },
       {
@@ -116,11 +107,11 @@ export const footerLinks = [
         link: "https://www.hoobank.com/how-it-works/",
       },
       {
-        name: "Create",
+        name: "About",
         link: "https://www.hoobank.com/create/",
       },
       {
-        name: "Explore",
+        name: "Signup",
         link: "https://www.hoobank.com/explore/",
       },
       {
@@ -136,21 +127,10 @@ export const footerLinks = [
         name: "Help Center",
         link: "https://www.hoobank.com/help-center/",
       },
-      {
-        name: "Partners",
-        link: "https://www.hoobank.com/partners/",
-      },
+
       {
         name: "Suggestions",
         link: "https://www.hoobank.com/suggestions/",
-      },
-      {
-        name: "Blog",
-        link: "https://www.hoobank.com/blog/",
-      },
-      {
-        name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
       },
     ],
   },
@@ -195,18 +175,18 @@ export const socialMedia = [
 export const clients = [
   {
     id: "client-1",
-    logo: airbnb,
+    // logo: airbnb,
   },
   {
     id: "client-2",
-    logo: binance,
+    // logo: binance,
   },
   {
     id: "client-3",
-    logo: coinbase,
+    // logo: coinbase,
   },
   {
     id: "client-4",
-    logo: dropbox,
+    // logo: dropbox,
   },
 ];
