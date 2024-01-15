@@ -2,6 +2,7 @@ import { features } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Button";
 import "animate.css";
+import "../components/billing.css";
 
 const FeatureCard = ({ icon, title, content, index }) => (
   <div
@@ -25,7 +26,7 @@ const FeatureCard = ({ icon, title, content, index }) => (
   </div>
 );
 
-import { useState } from 'react';
+import { useState } from "react";
 
 const Business = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -35,31 +36,38 @@ const Business = () => {
       <div className="MainCardzz flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 space-x-4">
         {[0, 1, 2].map((index) => (
           <div
+            id="main-card"
             key={index}
             onMouseEnter={() => setHoveredCard(index)}
             onMouseLeave={() => setHoveredCard(null)}
             className={`bg-white p-4 rounded-md shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105 flex flex-col items-center w-[50%] h-[100%] ${
-              hoveredCard === index ? 'bg-blue-300' : ''
+              hoveredCard === index ? "bg-blue-300" : ""
             }`}
             style={{
-              boxShadow: hoveredCard === index ? '0 4px 8px rgba(255, 0, 0, 0.5)' : '0 4px 8px rgba(255, 0, 0, 0.5)',
+              boxShadow:
+                hoveredCard === index
+                  ? "0 4px 8px rgba(255, 0, 0, 0.5)"
+                  : "0 4px 8px rgba(255, 0, 0, 0.5)",
+              marginLeft:
+                index === 0 && window.innerWidth <= 449 ? "40px" : "0",
+              marginRight: "10px", // Adjust the margin as needed
             }}
           >
             <i
               className={`fas fa-arrow-up text-2xl mb-2 ${
-                hoveredCard === index ? 'text-blue-500' : 'text-red-500'
+                hoveredCard === index ? "text-blue-500" : "text-red-500"
               }`}
             ></i>
             <p
               className={`text-gray-800 font-bold text-center ${
-                hoveredCard === index ? 'text-blue-500' : ''
+                hoveredCard === index ? "text-blue-500" : ""
               }`}
             >
               Increase productivity
             </p>
             <p
               className={`text-gray-600 text-center ${
-                hoveredCard === index ? 'text-blue-500' : ''
+                hoveredCard === index ? "text-blue-500" : ""
               }`}
             >
               Save hours of work. Reduce the probability of getting into spam

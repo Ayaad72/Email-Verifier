@@ -1,8 +1,8 @@
 // Billing.jsx
 import { apple, google } from "../assets";
 import styles, { layout } from "../style";
-import FAQ from "../assets/FAQ.png";
-
+import MAN from "../assets/man-verifier.png";
+import "../components/billing.css";
 import "../components/billing.css";
 import "animate.css";
 
@@ -35,7 +35,7 @@ const Billing = () => (
             </p>
           </div>
           <div id="nnn" className="flex flex-col gap-2 mb-4">
-            <h3 className="text-3xl font-semibold text-cyan-500">
+            <h3 className="text-3xl font-bold text-cyan-500">
               ➣ What is the purpose of email verification?
             </h3>
             <p className="text-xl ">
@@ -46,7 +46,7 @@ const Billing = () => (
           </div>
 
           <div id="nnn" className="mb-4 space-y-2">
-            <h3 className="text-xl text-3xl font-semibold text-cyan-500">
+            <h3 className=" text-3xl font-bold text-cyan-500">
               ➣ How do you verify Gmail accounts?
             </h3>
             <p className="mt-2 text-xl ">
@@ -56,10 +56,7 @@ const Billing = () => (
           </div>
 
           <div className="mb-4  text-blder  letter spabceinf \\ space-y-2">
-            <h3
-              id="nnn"
-              className="text-xl text-3xl font-semibold text-cyan-500"
-            >
+            <h3 id="nnn" className=" text-3xl font-bold text-cyan-500">
               ➣ Is my email information safe with your service?
             </h3>
             <p id="nnn" className="text-xl  text-93c5fd">
@@ -71,8 +68,8 @@ const Billing = () => (
 
           {/* Add more FAQ items as needed */}
         </div>
-        <div className="w-full h-full hidden md:block">
-          <img className="animated-float w-full h-full" src={FAQ} alt="" />
+        <div id="man-verify" className="w-full h-full hidden md:block">
+          <img className="animated-float w-full h-full" src={MAN} alt="" />
         </div>
       </section>
     </section>

@@ -11,6 +11,8 @@ import {
   Testimonials,
   Hero,
 } from "./components";
+import Bulk from "./components/Bulk/App.jsx";
+import LoginPage from "./components/login/App";
 
 const App = () => (
   <div className="bg-primary w-full overflow-hidden">
@@ -35,6 +37,9 @@ const App = () => (
         <Clients />
         <CTA />
         <Footer />
+        <Bulk />
+        <LoginPage />
+        <Bulk />
       </div>
     </div>
   </div>

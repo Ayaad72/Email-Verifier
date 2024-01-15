@@ -1,0 +1,350 @@
+body{
+    background-color: #305a77;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #26374d;
+    color: #ffffff;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  h1 {
+    font-size: 32px; /* Increase font size */
+    margin: 0;
+  }
+  
+  #img {
+    width: 190px;
+    height: 60px;
+  }
+  
+  .nav {
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+  
+    li {
+      margin-right: 20px;
+    }
+  
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+  
+    a:hover {
+      color: #1255f3;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav {
+      margin-top: 20px;
+  
+      ul {
+        flex-direction: column;
+      }
+  
+      li {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  
+  /* App.css */
+  .container {
+    max-width: 1000px; /* Increase max-width */
+    margin: 40px auto;
+    padding: 40px; /* Increase padding */
+    background-color: #ecf0f1;
+    text-align: center;
+    border-radius: 10px; /* Add border-radius for a rounded appearance */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  }
+    
+  .animated-text {
+    font-size: 48px; /* Increase font size */
+    margin: 0;
+    color: #3498db;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+  
+  .text-section p {
+    color: #555;
+    font-size: 18px; /* Increase font size */
+  }
+  
+  .text-section a {
+    display: inline-block;
+    margin-top: 15px; /* Increase margin */
+    padding: 10px 20px;
+    color: #3498db;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+  }
+  
+  .text-section a:hover {
+    background-color: #403421;
+    color: #ffffff;
+  }
+  
+  .input-section {
+    margin-top: 30px; /* Increase margin */
+  }
+  
+  textarea {
+    padding: 30px; /* Increase padding */
+    width: 70%; /* Adjust width */
+    margin-right: 10px;
+    font-size: 16px; /* Increase font size */
+  }
+
+  
+  
+  button {
+    padding: 15px; /* Increase padding */
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    bottom: 30px;
+    height: 60px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Increase font size */
+  }
+  
+  button:hover {
+    width: 80px;
+    height: 65px;
+    background-color: #293555;
+  }
+  
+  .verification-form {
+    margin-top: 30px; /* Increase margin */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Increase margin */
+  }
+  
+  th,
+  td {
+    padding: 15px; /* Increase padding */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px; /* Increase font size */
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    textarea {
+      width: 100%;
+      margin-bottom: 20px; /* Increase margin */
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
+  
+.intro-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    transition: transform 0.3s ease; /* Add hover animation */
+  }
+  
+  .intro-container:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .intro-title {
+    font-size: 32px;
+    color: #3498db;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+  }
+  /* App.css */
+/* ... (previous styles) */
+
+.info-section {
+    margin-top: 50px;
+    text-align: left;
+  }
+  
+  .info-section h2 {
+    font-size: 28px;
+    color: #3498db;
+    margin-bottom: 20px;
+  }
+  
+  .info-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .info-section h3 {
+    font-size: 20px;
+    color: #3498db;
+    margin-top: 20px;
+  }
+  
+  .info-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .info-section li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+
+
+  .footer {
+    background-color: #26374d;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-logo img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+  }
+  
+  .footer-links a:hover {
+    color: #f39c12;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (min-width: 768px) {
+    .footer-content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .footer-links {
+      margin-top: 0;
+    }
+  }
+  @media screen and (min-width: 527px) {
+
+    .footer-logo{
+        display: grid;
+    }
+  }
+
+
+  @media screen and (max-width:760px){
+textarea{
+  width: 90%;
+}
+  }
+  @media screen and (max-width:440px){
+ .input-section{
+/* border: 1px solid red; */
+gap: 29px;
+display: flex;
+flex-direction: column;
+ }
+      }
+
+
+      /* Responsive Styles for Table */
+@media screen and (max-width: 768px) {
+  table {
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+}
+
+
+@media screen and (max-width: 370px) {
+textarea{
+  position: relative;
+  right: 12px;
+}
+}

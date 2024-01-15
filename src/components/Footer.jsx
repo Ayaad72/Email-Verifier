@@ -1,6 +1,7 @@
 import styles from "../style";
-import  emllogo  from "../assets/isssstbg.png";
+import emllogo from "../assets/isssstbg.png";
 import { footerLinks, socialMedia } from "../constants";
+import "../components/billing.css";
 import "animate.css";
 
 const Footer = () => (

@@ -1,9 +1,12 @@
 import styles from "../style";
 import Button from "./Button";
+import "../components/billing.css";
 import "animate.css";
+import { Link } from "react-router-dom";
 
 const CTA = () => (
   <section
+    id="CTA-sec"
     className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col bg-black-gradient-2 rounded-[20px] box-shadow`}
   >
     <div className="flex-1 flex flex-col">
@@ -15,7 +18,9 @@ const CTA = () => (
     </div>
 
     <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}>
-      <Button />
+      <Link to="/bulk">
+        <Button />
+      </Link>
     </div>
   </section>
 );

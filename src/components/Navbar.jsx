@@ -4,6 +4,7 @@ import { close, menu } from "../assets";
 import emllogo from "../assets/isssstbg.png";
 
 import { navLinks } from "../constants";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -22,7 +23,11 @@ const Navbar = () => {
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >
-            <a href={`#${nav.id}`}>{nav.title}</a>
+            {nav.link ? (
+              <Link to={`${nav.link}`}>{nav.title}</Link>
+            ) : (
+              <a href={`#${nav.id}`}>{nav.title}</a>
+            )}
           </li>
         ))}
       </ul>

@@ -1,6 +1,7 @@
 import styles from "../style";
 import GetStarted from "./GetStarted";
 import "animate.css";
+import "../components/billing.css";
 import mainpic from "../../src/assets/mainpic.png";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -25,7 +26,10 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-row  justify-between items-center w-full">
-          <h1 className="animate__animated animate__zoomIn flex-1 font-poppins font-semibold ss:text-[52px] text-[52px]  text-gradient ss:leading-[100.8px] leading-[75px]">
+          <h1
+            id="verf"
+            className="animate__animated animate__zoomIn flex-1 font-poppins font-semibold ss:text-[52px] text-[52px]  text-gradient ss:leading-[100.8px] leading-[75px]"
+          >
             Verify email address
             <br className="sm:block hidden" />{" "}
           </h1>
@@ -57,6 +61,7 @@ const Hero = () => {
             </button>
           </span>
           <input
+            id="searchinp"
             type="search"
             name="q"
             className="py-3 pl-10 text-sm text-white bg-gray-800 rounded-md focus:outline-none focus:bg-white focus:text-gray-900 w-[450px] h-[50px]"
