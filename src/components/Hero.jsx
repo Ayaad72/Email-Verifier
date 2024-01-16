@@ -1,3 +1,5 @@
+import { useState } from "react";
+import * as EmailValidator from "email-validator";
 import styles from "../style";
 import GetStarted from "./GetStarted";
 import "animate.css";
@@ -8,6 +10,20 @@ import mainpic from "../../src/assets/mainpic.png";
 import "../components/billing.css";
 
 const Hero = () => {
+  const [email, setEmail] = useState("");
+  const [verificationResult, setVerificationResult] = useState(null);
+
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleVerifyEmail = () => {
+    const isValid = EmailValidator.validate(email);
+    setVerificationResult(isValid);
+    console.log(isValid, "ISSS");
+  };
+  console.log(verificationResult, "TEST");
+
   return (
     <section
       id="home"
@@ -34,7 +50,7 @@ const Hero = () => {
             <br className="sm:block hidden" />{" "}
           </h1>
           <div className="ss:flex hidden md:mr-4 mr-0">
-            <GetStarted />
+            <GetStarted onVerifyEmail={handleVerifyEmail} />
           </div>
         </div>
 
@@ -44,25 +60,19 @@ const Hero = () => {
               type="submit"
               className="p-1 focus:outline-none focus:shadow-outline"
             >
-              <svg
+              {/* <svg
                 className="w-6 h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 21l-5-5m-9 0a8 8 0 100-16 8 8 0 000 16z"
-                ></path>
-              </svg>
+              ></svg> */}
             </button>
           </span>
           <input
             id="searchinp"
             type="search"
+            onChange={handleChange}
             name="q"
             className="py-3 pl-10 text-sm text-white bg-gray-800 rounded-md focus:outline-none focus:bg-white focus:text-gray-900 w-[450px] h-[50px]"
             placeholder="please enter your email ID"
@@ -70,7 +80,13 @@ const Hero = () => {
           />
         </div>
         <ol className="w-1/2 ml-10 pt-5">
-          <li className="text-white pr-79"></li>
+          {verificationResult === true ? (
+            <li className="text-white pr-79">Email is Ok</li>
+          ) : verificationResult === false ? (
+            <li className="text-white pr-79">Invalid Email</li>
+          ) : (
+            <li className="text-white pr-79"></li>
+          )}
         </ol>
 
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>

@@ -1,90 +1,89 @@
-/* App.css */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Fantasy', sans-serif;
-    background: url(../assets/login-bg.jpg)no-repeat center center/cover;
-  }
+    font-family: 'Fantasy', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: url(../assets/login-bg.jpg) no-repeat center center/cover;
+}
 
-  
-  .login-page {
+.login-page {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #3498db;
-  }
-  
-  .container {
+    background-color: #3498DB;
+}
+
+.container {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 12px;
-    width: 500px;
+    width: 80%; /* Adjusted width for better responsiveness */
+    max-width: 500px; /* Added max-width to prevent content from stretching too wide */
     padding: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .tabs {
+}
+
+.tabs {
     display: flex;
-    justify-content: space-between;
-  }
-  
-  .login-tab,
-  .signup-tab {
+   /* Changed to column layout for better mobile display */
+    align-items: center; /* Centering tabs on mobile */
+}
+
+.login-tab,
+.signup-tab {
     cursor: pointer;
     padding: 15px;
     font-size: 20px;
-    color: #217dbb;
+    color: #217DBB;
     transition: color 0.3s ease-in-out;
-  }
-  
-  .login-tab.active,
-  .signup-tab.active {
-    color: #3498db;
-    border-bottom: 3px solid #3498db;
-  }
-  
-  .tab-content {
+}
+#login-t
+.login-tab.active,
+.signup-tab.active {
+    color: #3498DB;
+    border-bottom: 3px solid #3498DB;
+}
+
+.tab-content {
     display: none;
-  }
-  
-  .tab-content.active {
+}
+
+.tab-content.active {
     display: block;
     margin-top: 30px;
     transition: margin-top 0.3s ease-in-out;
-  }
-  
-  form {
+}
+
+form {
     display: flex;
     flex-direction: column;
-  }
-  
-  label {
+}
+
+label {
     margin-bottom: 10px;
     font-size: 18px;
-    font-style: italic;
     color: #333;
-  }
-  
-  input {
+}
+
+input {
     padding: 15px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 6px;
-  }
-  
-  button {
-    padding: 15px;
-    background-color: #3498db;
+    width: 100%; /* Make input fields take full width */
+}
+
+button {
+    width: 100%; /* Make button take full width */
+    background-color: #217DBB;
     color: #fff;
-    border: none;
+    border: 1px solid #217DBB;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 20px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  button:hover {
-    background-color: #217dbb;
-  }
-  
+    padding: 15px;
+    margin-top: 10px; /* Add some space between input and button */
+}
+
+button:hover {
+    background-color: #105A8C; /* Darker color on hover */
+}

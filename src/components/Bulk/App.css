@@ -12,7 +12,20 @@ body{
     position: relative;
     z-index: 1000;
   }
-  
+  #textarea{
+    border: 1px solid rgb(36, 30, 30);
+  }
+  #btn-verifie{
+      width: 80px;
+      height: 50px;
+      position:relative;
+      bottom: 20px;
+      background-color: #8aa9f3;
+      border: 1px solid;
+  }
+  #btn-verifie:hover{
+    background-color: #1255f3;
+  }
   .logo-container {
     display: flex;
     align-items: center;
@@ -135,7 +148,7 @@ body{
     padding: 15px; /* Increase padding */
     background-color: #3498db;
     color: #ffffff;
-    border: none;
+    border: 1px solid red;
     cursor: pointer;
     position: relative;
     bottom: 30px;
@@ -143,13 +156,10 @@ body{
     border-radius: 12px;
     transition: background-color 0.3s ease;
     font-size: 16px; /* Increase font size */
+   
   }
   
-  button:hover {
-    width: 80px;
-    height: 65px;
-    background-color: #293555;
-  }
+
   
   .verification-form {
     margin-top: 30px; /* Increase margin */

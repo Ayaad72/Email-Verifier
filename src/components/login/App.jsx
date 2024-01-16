@@ -1,19 +1,16 @@
-// App.jsx
 import React, { useState } from "react";
 import "../login/Login.css";
-
 const LoginPage = () => {
   const [isLoginTabActive, setLoginTabActive] = useState(true);
-
   const toggleTabs = () => {
     setLoginTabActive(!isLoginTabActive);
   };
-
   return (
     <div className="login-page">
       <div className="container">
         <div className="tabs">
           <h3
+            id="login-txt"
             className={`login-tab ${isLoginTabActive ? "active" : ""}`}
             onClick={toggleTabs}
           >
@@ -35,7 +32,9 @@ const LoginPage = () => {
                 <input type="email" placeholder="Enter your email" />
                 <label>Password:</label>
                 <input type="password" placeholder="Enter your password" />
-                <button type="submit">Login</button>
+                <button id="login-btnn" type="submit">
+                  Login
+                </button>
               </form>
             </div>
           ) : (
@@ -43,12 +42,14 @@ const LoginPage = () => {
               {/* Sign Up Form */}
               <form>
                 <label>Email:</label>
-                <input type="email" placeholder="Enter your email" />
+                <input id="inp1" type="email" placeholder="Enter your email" />
                 <label>Password:</label>
                 <input type="password" placeholder="Enter your password" />
                 <label>Confirm Password:</label>
                 <input type="password" placeholder="Confirm your password" />
-                <button type="submit">Sign Up</button>
+                <button id="login-btnn" type="submit">
+                  Sign Up
+                </button>
               </form>
             </div>
           )}
@@ -57,5 +58,4 @@ const LoginPage = () => {
     </div>
   );
 };
-
 export default LoginPage;

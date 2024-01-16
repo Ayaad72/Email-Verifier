@@ -11,15 +11,11 @@ const App = () => {
   const handleVerifyClick = () => {
     // Perform email verification logic if needed
     // For now, just toggle the form visibility
-    if (currentEmail.trim() !== "") {
-      setShowVerificationForm(true);
-      setEmails([...emails, currentEmail]);
-      setCurrentEmail("");
-      // You should perform the actual verification and update the results accordingly
-      // For demonstration purposes, adding a dummy result
-      setVerificationResults([...verificationResults, "Verified"]);
-    }
+    const newArr = currentEmail.split("\n");
+    setEmails([...emails, newArr]);
   };
+
+  console.log(emails, "EM");
 
   return (
     <>
@@ -59,12 +55,15 @@ const App = () => {
         </div>
         <div className="input-section">
           <textarea
+            id="textarea"
             type="text"
             placeholder="Enter email addresses"
             value={currentEmail}
             onChange={(e) => setCurrentEmail(e.target.value)}
           />
-          <button onClick={handleVerifyClick}>Verify</button>
+          <button id="btn-verifie" onClick={handleVerifyClick}>
+            Verify
+          </button>
         </div>
         {showVerificationForm && (
           <div className="verification-form">
