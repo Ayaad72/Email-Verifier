@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import "../Bulk/App.css";
 import logo from "../../assets/isssstbg.png";
 
+
 const App = () => {
   const [emails, setEmails] = useState([]);
   const [verificationResults, setVerificationResults] = useState([]);
   const [currentEmail, setCurrentEmail] = useState("");
   const [showVerificationForm, setShowVerificationForm] = useState(false);
+
+  // commssepemail = [];
+  // let commssepemail = [];
 
   const handleVerifyClick = () => {
     // Perform email verification logic if needed
@@ -15,7 +19,28 @@ const App = () => {
     setEmails([...emails, newArr]);
   };
 
+  // const namesArray = ['yasir', 'irfan', 'ali', 'shery'];
+
+  // const whatIsType = typeof namesArray;
+  // console.log(whatIsType + " type pata karna cha ra hu");
+
+  // const emailArray = Object.values(emails);
+
+  // const variableTypeOfEmails = typeof emails;
+  // const variableTypeOfEmails1 = typeof emails;
+
+  // console.log(variableTypeOfEmails + "  hey im here");
+  // console.log(variableTypeOfEmails1 + "  hey im here 1");
+
+  // commssepemail = currentEmail.split(",");
+
   console.log(emails, "EM");
+  // console.log(newArr, "newArr");
+  // emails = [
+  //   'yasirirhsdfjhjfan01@gmail.com',
+  //   'ayyad@gmail.com',
+  //   'shery@hotmail.com',
+  // ];
 
   return (
     <>
@@ -85,6 +110,54 @@ const App = () => {
             </table>
           </div>
         )}
+        {/* Creation of table started */}
+
+
+        <div>
+      <h2>Data Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            {/* <th>Last Name</th>
+            <th>Other Name</th> */}
+          </tr>
+        </thead>
+        <tbody>
+          {emails.map((data, index) => (
+            // Use nested map to iterate over each item in the sub-array
+            data.map((item, subIndex) => (
+              <tr key={index * 100 + subIndex}>
+                <td>{item}</td>
+              </tr>
+            ))
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+
+    {/* <div>
+      <h2>Email List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {emails.map((email, index) => (
+            <tr key={index}>
+              <td>{email}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+   */}
+
+        {/* Creation of table ended  */}
+
         <div className="intro-container">
           <h2 className="intro-title">Email Verification Tool</h2>
           <p className="intro-text">
