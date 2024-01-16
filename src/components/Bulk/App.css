@@ -12,6 +12,11 @@ body{
     position: relative;
     z-index: 1000;
   }
+  #bulk-logo{
+    width: 180px;
+    height: 60px;
+    /* border: 1px solid red; */
+  }
   #textarea{
     border: 1px solid rgb(36, 30, 30);
   }
@@ -47,6 +52,21 @@ body{
     height: 60px;
   }
   
+  @media screen and (max-width:784px){
+    #login-btnn {
+      right: 223px;
+      border: 1px solid red;
+      position: relative;
+  }
+  
+  }
+  @media screen and (max-width:548px){
+    #login-btnn {
+      right:420px;
+      border: 1px solid red;
+      position: relative;
+  }
+  }
   .nav {
     ul {
       list-style: none;

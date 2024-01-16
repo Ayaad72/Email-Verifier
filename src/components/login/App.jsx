@@ -29,9 +29,13 @@ const LoginPage = () => {
               {/* Login Form */}
               <form>
                 <label>Email:</label>
-                <input type="email" placeholder="Enter your email" />
+                <input id="inp1" type="email" placeholder="Enter your email" />
                 <label>Password:</label>
-                <input type="password" placeholder="Enter your password" />
+                <input
+                  id="inp1"
+                  type="password"
+                  placeholder="Enter your password"
+                />
                 <button id="login-btnn" type="submit">
                   Login
                 </button>
@@ -44,9 +48,17 @@ const LoginPage = () => {
                 <label>Email:</label>
                 <input id="inp1" type="email" placeholder="Enter your email" />
                 <label>Password:</label>
-                <input type="password" placeholder="Enter your password" />
+                <input
+                  id="inp1"
+                  type="password"
+                  placeholder="Enter your password"
+                />
                 <label>Confirm Password:</label>
-                <input type="password" placeholder="Confirm your password" />
+                <input
+                  id="inp1"
+                  type="password"
+                  placeholder="Confirm your password"
+                />
                 <button id="login-btnn" type="submit">
                   Sign Up
                 </button>

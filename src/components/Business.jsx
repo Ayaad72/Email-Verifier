@@ -40,8 +40,8 @@ const Business = () => {
             key={index}
             onMouseEnter={() => setHoveredCard(index)}
             onMouseLeave={() => setHoveredCard(null)}
-            className={`bg-white p-4 rounded-md shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105 flex flex-col items-center w-[50%] h-[100%] ${
-              hoveredCard === index ? "bg-blue-300" : ""
+            className={`bg-[black ] text-white p-4 rounded-md shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105 flex flex-col justify-center items-center w-[50%] h-[200%] ${
+              hoveredCard === index ? "bg-[grey]-300" : "text-[white]-500"
             }`}
             style={{
               boxShadow:
@@ -59,14 +59,15 @@ const Business = () => {
               }`}
             ></i>
             <p
-              className={`text-gray-800 font-bold text-center ${
+              className={`text-red-800 font-bold text-center ${
                 hoveredCard === index ? "text-blue-500" : ""
               }`}
             >
               Increase productivity
             </p>
+
             <p
-              className={`text-gray-600 text-center ${
+              className={`text-red-600 text-center ${
                 hoveredCard === index ? "text-blue-500" : ""
               }`}
             >

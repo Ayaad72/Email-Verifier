@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Bulk/App.css";
-// import logo from "./assets/isssstbg.png";
+import logo from "../../assets/isssstbg.png";
 
 const App = () => {
   const [emails, setEmails] = useState([]);
@@ -21,7 +21,7 @@ const App = () => {
     <>
       <header className="header">
         <div className="logo-container">
-          <img id="img" alt="" />
+          <img id="bulk-logo" src={logo} alt="" />
           {/* <h1>Bulk Email Verifier</h1> */}
         </div>
         <nav className="nav">
@@ -31,12 +31,6 @@ const App = () => {
             </li>
             <li>
               <a href="#">Features</a>
-            </li>
-            <li>
-              <a href="#">Pricing</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
             </li>
           </ul>
         </nav>

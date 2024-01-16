@@ -22,6 +22,14 @@ body {
     padding: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
+#login-btnn{
+    /* position: relative;
+    top: 20px; */
+    margin-top: 50px;
+}
+#inp1,#inp2{
+    height: 40px;
+}
 
 .tabs {
     display: flex;
@@ -47,6 +55,12 @@ body {
 .tab-content {
     display: none;
 }
+
+#login-btnn{
+    width: 250px;
+    margin-left: 450px;
+}
+
 
 .tab-content.active {
     display: block;
@@ -86,4 +100,11 @@ button {
 
 button:hover {
     background-color: #105A8C; /* Darker color on hover */
+}
+
+
+@media screen and (max-width:807px){
+    #login-btnn{
+border: 1px solid red;
+    }
 }

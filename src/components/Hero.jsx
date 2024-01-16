@@ -55,20 +55,7 @@ const Hero = () => {
         </div>
 
         <div className="ml-90 gap-0 max-w-screen-md relative text-gray-600 focus-within:text-gray-400">
-          <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-            <button
-              type="submit"
-              className="p-1 focus:outline-none focus:shadow-outline"
-            >
-              {/* <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              ></svg> */}
-            </button>
-          </span>
+          <span className="absolute inset-y-0 left-0 flex items-center pl-2"></span>
           <input
             id="searchinp"
             type="search"
@@ -81,9 +68,9 @@ const Hero = () => {
         </div>
         <ol className="w-1/2 ml-10 pt-5">
           {verificationResult === true ? (
-            <li className="text-white pr-79">Email is Ok</li>
+            <li className="text-[green] pr-79">Email is valid</li>
           ) : verificationResult === false ? (
-            <li className="text-white pr-79">Invalid Email</li>
+            <li className="text-[red] pr-79">Invalid Email</li>
           ) : (
             <li className="text-white pr-79"></li>
           )}
