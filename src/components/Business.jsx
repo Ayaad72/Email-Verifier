@@ -32,7 +32,7 @@ const Business = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
-    <section id="features" className={`${layout.section} text-white`}>
+    <section id="features" className={`${layout.section} text-white `}>
       <div className="MainCardzz flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 space-x-4">
         {[0, 1, 2].map((index) => (
           <div

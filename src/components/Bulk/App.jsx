@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../Bulk/App.css";
 import logo from "../../assets/isssstbg.png";
 
-
 const App = () => {
   const [emails, setEmails] = useState([]);
   const [verificationResults, setVerificationResults] = useState([]);
@@ -112,32 +111,34 @@ const App = () => {
         )}
         {/* Creation of table started */}
 
-
         <div>
-      <h2>Data Table</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>First Name</th>
-            {/* <th>Last Name</th>
-            <th>Other Name</th> */}
-          </tr>
-        </thead>
-        <tbody>
-          {emails.map((data, index) => (
-            // Use nested map to iterate over each item in the sub-array
-            data.map((item, subIndex) => (
-              <tr key={index * 100 + subIndex}>
-                <td>{item}</td>
+          <h2>Data Table</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>EMAIL ID</th>
               </tr>
-            ))
-          ))}
-        </tbody>
-      </table>
-    </div>
+            </thead>
+            <tbody>
+              {/* Displaying email rows */}
+              {emails.map((data, index) => (
+                <tr key={index}>
+                  {data.map((item, subIndex) => (
+                    <td key={index * 100 + subIndex}>{item}</td>
+                  ))}
+                </tr>
+              ))}
 
+              {/* Displaying "melvin" related data */}
 
-    {/* <div>
+              <thead>
+                <tr></tr>
+              </thead>
+            </tbody>
+          </table>
+        </div>
+
+        {/* <div>
       <h2>Email List</h2>
       <table>
         <thead>
