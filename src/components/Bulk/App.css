@@ -2,6 +2,25 @@ body{
     background-color: #305a77;
 }
 
+#textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px rgba(20, 20, 20, 2.1); */
+  transition: box-shadow 0.3s ease;
+
+  /* Additional styles for better appearance */
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+  min-height: 100px;
+}
+
+#textarea:hover {
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 0 10px rgba(20, 20, 20, 2.1);
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -19,14 +38,16 @@ body{
   }
   #textarea{
     height: 130px;
-    /* margin-left: 70px; */
-    border: 1px solid rgb(36, 30, 30);
+    width: 240%;
+    margin-right: 220px;
+    /* border: 1px solid rgb(36, 30, 30); */
   }
   #btn-verifie{
-      width: 80px;
+
+      width: 120px;
       height: 50px;
-      position:relative;
-      bottom: 20px;
+     position: relative;
+     top: 12px;
       background-color: #8aa9f3;
       border: 1px solid;
   }
@@ -154,7 +175,10 @@ body{
   }
   
   .input-section {
+    justify-content: center;
+    align-items: center;
     margin-top: 30px; /* Increase margin */
+    display: grid;
   }
   
   textarea {
@@ -352,8 +376,13 @@ textarea{
 }
   }
   @media screen and (max-width:440px){
+    #textarea{
+      position: relative;
+     width:80%;
+      left: 110px;
+    }
  .input-section{
-/* border: 1px solid red; */
+
 gap: 29px;
 display: flex;
 flex-direction: column;

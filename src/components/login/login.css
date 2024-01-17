@@ -17,8 +17,8 @@ body {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 12px;
-    width: 80%; /* Adjusted width for better responsiveness */
-    max-width: 500px; /* Added max-width to prevent content from stretching too wide */
+    width: 80%; 
+    max-width: 500px; 
     padding: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }

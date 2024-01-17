@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../Bulk/App.css";
 import logo from "../../assets/isssstbg.png";
+import * as EmailValidator from "email-validator";
+import { Link } from "react-router-dom";
 
 const App = () => {
   const [emails, setEmails] = useState([]);
@@ -8,50 +10,34 @@ const App = () => {
   const [currentEmail, setCurrentEmail] = useState("");
   const [showVerificationForm, setShowVerificationForm] = useState(false);
 
-  // commssepemail = [];
-  // let commssepemail = [];
-
   const handleVerifyClick = () => {
-    // Perform email verification logic if needed
-    // For now, just toggle the form visibility
-    const newArr = currentEmail.split("\n");
-    setEmails([...emails, newArr]);
+    // Perform email verification logic
+    const newArr = currentEmail
+      .split("\n")
+      .filter((email) => email.trim() !== "");
+    setEmails([...emails, ...newArr]);
+
+    // Verify each email and update results
+    const results = newArr.map((email) => EmailValidator.validate(email));
+    setVerificationResults([...verificationResults, ...results]);
+
+    // Show the verification form
+    setShowVerificationForm(true);
   };
-
-  // const namesArray = ['yasir', 'irfan', 'ali', 'shery'];
-
-  // const whatIsType = typeof namesArray;
-  // console.log(whatIsType + " type pata karna cha ra hu");
-
-  // const emailArray = Object.values(emails);
-
-  // const variableTypeOfEmails = typeof emails;
-  // const variableTypeOfEmails1 = typeof emails;
-
-  // console.log(variableTypeOfEmails + "  hey im here");
-  // console.log(variableTypeOfEmails1 + "  hey im here 1");
-
-  // commssepemail = currentEmail.split(",");
-
-  console.log(emails, "EM");
-  // console.log(newArr, "newArr");
-  // emails = [
-  //   'yasirirhsdfjhjfan01@gmail.com',
-  //   'ayyad@gmail.com',
-  //   'shery@hotmail.com',
-  // ];
 
   return (
     <>
       <header className="header">
         <div className="logo-container">
-          <img id="bulk-logo" src={logo} alt="" />
-          {/* <h1>Bulk Email Verifier</h1> */}
+          <Link to="/">
+            {" "}
+            <img id="bulk-logo" src={logo} alt="" />
+          </Link>
         </div>
         <nav className="nav">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <a href="#">Features</a>
@@ -91,7 +77,7 @@ const App = () => {
                   <th>SR</th>
                   <th>Email</th>
                   <th>Result</th>
-                  <th>MX</th>
+                  {/* <th>MX</th> */}
                   <th>Quality</th>
                 </tr>
               </thead>
@@ -100,65 +86,20 @@ const App = () => {
                   <tr key={index}>
                     <td>{index + 1}</td>
                     <td>{emails[index]}</td>
-                    <td>{result}</td>
-                    <td>smtp.example.com</td>
-                    <td>High</td>
+                    <td>{result ? "Valid" : "Invalid"}</td>
+                    {/* <td>smtp.example.com</td> */}
+                    <td>
+                      {result && EmailValidator.validate(emails[index])
+                        ? "High"
+                        : "Low"}
+                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
         )}
-        {/* Creation of table started */}
-
-        <div>
-          <h2>Data Table</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>EMAIL ID</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* Displaying email rows */}
-              {emails.map((data, index) => (
-                <tr key={index}>
-                  {data.map((item, subIndex) => (
-                    <td key={index * 100 + subIndex}>{item}</td>
-                  ))}
-                </tr>
-              ))}
-
-              {/* Displaying "melvin" related data */}
-
-              <thead>
-                <tr></tr>
-              </thead>
-            </tbody>
-          </table>
-        </div>
-
-        {/* <div>
-      <h2>Email List</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          {emails.map((email, index) => (
-            <tr key={index}>
-              <td>{email}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-   */}
-
-        {/* Creation of table ended  */}
-
+        {/* ... (existing code) ... */}
         <div className="intro-container">
           <h2 className="intro-title">Email Verification Tool</h2>
           <p className="intro-text">
@@ -179,7 +120,6 @@ const App = () => {
             paste the email id’s in the tool and pick the format in which you
             want the report (COPY, Text, CSV & Excel Data format).
           </p>
-
           <h3>Tool is useful for:</h3>
           <ul>
             <li>Email Marketers</li>
@@ -193,7 +133,6 @@ const App = () => {
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-logo">
-            {/* <img id="img" src={logo} alt="Footer Logo" /> */}
             <span>Bulk Email Verifier</span>
           </div>
           <div className="footer-links">
